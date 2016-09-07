@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="" ng-app="contactsApp">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Contacts application</title>
+    <base href="/"/>
+    <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/materialize/bin/materialize.css"/>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+
+</head>
+
+<body>
+<nav>
+    <div class="nav-wrapper">
+        <a href="#" class="brand-logo">Contacts App</a>
+        <ul>
+            <li><a href="#">Overview</a></li>
+            <li><a href="#">Search</a></li>
+        </ul>
+    </div>
+</nav>
+
+<div ng-view>
+
+</div>
+
+<!-- build:js app/vendor.js -->
+<!-- bower:js -->
+<script src="/bower_components/angular/angular.js"></script>
+<script src="/bower_components/jquery/dist/jquery.js"></script>
+<script src="/bower_components/materialize/bin/materialize.js"></script>
+<script src="/bower_components/angular-route/angular-route.js"></script>
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js app/app.js -->
+<!-- inject:js -->
+<script src="app/core/core.module.js"></script>
+<script src="app/core/app.route.js"></script>
+<script src="app/app.module.js"></script>
+<script src="app/contacts-list/contacts-list.controller.js"></script>
+<script src="app/contacts-details/contacts-details.controller.js"></script>
+<script src="app/contacts-add/contacts-add.controller.js"></script>
+<script src="app/app.route.js"></script>
+<!-- endinject -->
+<!-- endbuild -->
+</body>
+</html>

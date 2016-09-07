@@ -1,0 +1,30 @@
+<div >
+    <h2>{{::ctrl.title}}</h2>   <!-- alias.property -->
+    <div class="row">
+        <button ng-click="ctrl.toggleList()" ng-class="ctrl.showList ? 'waves-green' : 'waves-black'"
+                class="btn waves-effect">
+            Toggle List
+        </button>
+        <ul ng-show="ctrl.showList" class="collection">
+            <li class="collection-item avatar" ng-repeat="contact in ctrl.contacts">
+                <img ng-src="{{contact.picture.thumbnail}}" class="circle"/>
+                <p>{{ $index +1 }} {{contact.name.first}} {{contact.name.last}} <br/>
+                    {{contact.email}}
+
+                    <a href="#/contacts-details/{{$index}}" class="secondary-content">
+                        <i class="material-icons">send</i>
+                    </a>
+                </p>
+            </li>
+
+
+        </ul>
+    </div>
+
+    <div class="fixed-action-btn" style="bottom: 45px; right :24px">
+        <a href="#/contacts-add" class="btn-floating btn-large green">
+            <i class="large material-icons">add</i>
+        </a>
+    </div>
+
+</div>
